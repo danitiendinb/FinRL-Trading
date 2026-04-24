@@ -35,6 +35,11 @@
 > - Custom risk overlays with max drawdown constraints (target: <15% MDD)
 > - Comparing equal-weight vs. mean-variance allocation baselines
 > - Backtesting on a universe of ~50 large-cap US equities (2018–2024)
+>
+> **Personal notes / findings so far:**
+> - Mean-variance allocation tends to over-concentrate in low-vol names during 2022 drawdown; adding an MDD cap of 12% helped significantly
+> - Equal-weight baseline is surprisingly competitive on Sharpe over the full 2018–2024 window — worth keeping as a benchmark
+> - TODO: try risk parity weighting as a third baseline
 
 ## About
 
@@ -44,6 +49,4 @@ Introduced in our paper *"FinRL-X: An AI-Native Modular Infrastructure for Quant
 
 > FinRL-X is **not just a library** — it is a full-stack trading platform engineered around modularity, reproducibility, and production-readiness, supporting everything from ML-based stock selection and professional backtesting to live brokerage execution.
 
-At its core is a **weight-centric architecture** — the target portfolio weight vector is the sole interface contract between strategy logic and downstream execution:
-
-$$w_t = \mathcal{R}_t\bigl(\mathcal{T}_t\bigl(\mathcal{A}_t\bigl(\mathcal{S}_t
+At its cor
