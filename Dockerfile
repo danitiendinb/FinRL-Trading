@@ -36,7 +36,8 @@ RUN pip install -e .
 
 # Create necessary directories
 # Also creating a personal notebooks dir for experimentation
-RUN mkdir -p data logs notebooks
+# Added models/ to persist trained model checkpoints between runs
+RUN mkdir -p data logs notebooks models
 
 # Create non-root user
 RUN useradd --create-home --shell /bin/bash app \
