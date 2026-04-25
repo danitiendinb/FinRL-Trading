@@ -11,6 +11,11 @@ Modules:
     models: Model training and evaluation utilities
     portfolio: Portfolio optimization and risk management
     backtest: Backtesting engine and performance metrics
+
+Notes:
+    Personal fork for learning purposes. Main areas of interest:
+    - Experimenting with custom reward shaping in the trading env
+    - Testing SAC and TD3 agents on crypto market data
 """
 
 __version__ = "0.1.0"
