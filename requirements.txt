@@ -19,7 +19,8 @@ pyportfolioopt>=1.5.4
 
 # Technical analysis
 ta>=0.10.2
-ta-lib>=0.4.25
+# ta-lib requires manual C library installation (brew install ta-lib on macOS)
+# ta-lib>=0.4.25
 stockstats>=0.5.2
 
 # Visualization
@@ -28,7 +29,7 @@ seaborn>=0.12.0
 plotly>=5.11.0
 
 # Environment
-gym>=0.26.0
+# gym is legacy; using gymnasium only
 gymnasium>=0.26.0
 
 # API & networking
