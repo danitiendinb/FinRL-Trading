@@ -62,13 +62,6 @@ datadate    tradedate    trade_price    y_return = ln(next/this)
 | `ln(price_2025-12-31 / price_2025-09-30)` | On 2025-09-30 the Q3 report is not yet public; you can't act on it until tradedate 2025-12-01 | Buy at tradedate, not quarter-end |
 | y_return = 0 | Frozen price from delisted ticker whose adj_close_q was never updated | Set to NULL |
 
-> **Personal note:** I initially fell into the second mistake above when I first read this — it's easy to conflate quarter-end price with tradedate price. The two-month lag is the key insight. Worth re-reading this section whenever picking up the project after a break.
+> **Personal note:** I initially fell into the second mistake above when I first read this — it's easy to conflate quarter-end price with tradedate price. The two-month lag is the key insight. Worth re-reading this section before touching any feature engineering code.
 
-### Pre-Run Verification (MUST execute before every model run)
-
-```python
-import sqlite3, pandas as pd, numpy as np
-conn = sqlite3.connect('data/finrl_trading.db')
-df = pd.read_sql('''
-    SELECT ticker, datadate, trade
-```
+> **Sanity check I added:** After computing y_return, run `df['y_return'].describe()` and verify the mean is in roughly the (-0.05, 0.10) range and there are no non-NULL zeros. A mean outside that range or any zeros are a red flag that something went wrong in the tradedate join.
