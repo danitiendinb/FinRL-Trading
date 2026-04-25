@@ -39,11 +39,12 @@
 > **Personal notes / findings so far:**
 > - Mean-variance allocation tends to over-concentrate in low-vol names during 2022 drawdown; adding an MDD cap of 12% helped significantly
 > - Equal-weight baseline is surprisingly competitive on Sharpe over the full 2018–2024 window — worth keeping as a benchmark
-> - TODO: try risk parity weighting as a third baseline
+> - Risk parity weighting tested (2025-01): sits between equal-weight and mean-variance on Sharpe, but notably better tail behavior — Calmar ratio ~0.82 vs ~0.61 for mean-variance
 > - TODO: test whether extending the backtest window back to 2015 changes the equal-weight vs. mean-variance conclusion (suspect it does given 2018 vol regime)
+> - TODO: try combining risk parity weights with the MDD cap overlay to see if that further improves Calmar
 
 ## About
 
 **FinRL-X** is a next-generation, **AI-native** quantitative trading infrastructure that redefines how researchers and practitioners build, test, and deploy algorithmic trading strategies. 
 
-Introduced in our paper *"FinRL-X: An AI-Native Modular Infrastructure for Quantitative Trading"* ([arXiv:2603.21330](https://arxiv.org/abs/2603.21330)), FinRL-X succeeds the original [FinRL](https://github.com/AI4Finance-Foundation/
+Introduced in our paper *"FinRL-X: An AI-Native Modular Infrastructure fo
