@@ -35,7 +35,8 @@ COPY .env* ./
 RUN pip install -e .
 
 # Create necessary directories
-RUN mkdir -p data logs
+# Also creating a personal notebooks dir for experimentation
+RUN mkdir -p data logs notebooks
 
 # Create non-root user
 RUN useradd --create-home --shell /bin/bash app \
