@@ -40,13 +40,10 @@
 > - Mean-variance allocation tends to over-concentrate in low-vol names during 2022 drawdown; adding an MDD cap of 12% helped significantly
 > - Equal-weight baseline is surprisingly competitive on Sharpe over the full 2018–2024 window — worth keeping as a benchmark
 > - TODO: try risk parity weighting as a third baseline
+> - TODO: test whether extending the backtest window back to 2015 changes the equal-weight vs. mean-variance conclusion (suspect it does given 2018 vol regime)
 
 ## About
 
 **FinRL-X** is a next-generation, **AI-native** quantitative trading infrastructure that redefines how researchers and practitioners build, test, and deploy algorithmic trading strategies. 
 
-Introduced in our paper *"FinRL-X: An AI-Native Modular Infrastructure for Quantitative Trading"* ([arXiv:2603.21330](https://arxiv.org/abs/2603.21330)), FinRL-X succeeds the original [FinRL](https://github.com/AI4Finance-Foundation/FinRL) framework with a fully modernized architecture designed for the LLM and agentic AI era.
-
-> FinRL-X is **not just a library** — it is a full-stack trading platform engineered around modularity, reproducibility, and production-readiness, supporting everything from ML-based stock selection and professional backtesting to live brokerage execution.
-
-At its cor
+Introduced in our paper *"FinRL-X: An AI-Native Modular Infrastructure for Quantitative Trading"* ([arXiv:2603.21330](https://arxiv.org/abs/2603.21330)), FinRL-X succeeds the original [FinRL](https://github.com/AI4Finance-Foundation/
